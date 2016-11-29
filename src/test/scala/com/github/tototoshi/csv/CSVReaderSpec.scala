@@ -174,8 +174,8 @@ class CSVReaderSpec extends FunSpec with ShouldMatchers with Using {
           res = res :+ fields
         }
       }
-      res(0) should be(List("a", "b\nb", "c"))
-      res(1) should be(List("\nd", "e", "f"))
+      res(0) should be(List("a", "b\r\nb", "c"))
+      res(1) should be(List("\r\nd", "e", "f"))
     }
 
     it("read TSV from file") {
